@@ -1,0 +1,20 @@
+<idea-plugin version="2">
+    <id>lu.uni.clion.cproject</id>
+    <name>CLion C Project Transformer</name>
+    <version>1.0</version>
+    <vendor email="christian.grevisse@uni.lu" url="http://www.christian-grevisse.lu">Christian Grévisse</vendor>
+    <description>
+        <![CDATA[ This plugin shall help CLion users to transform the boilerplate C++ project automatically created through CLion into a C project within a single click. ]]></description>
+    <!-- <change-notes><![CDATA[ ]]></change-notes> -->
+    <idea-version since-build="145.597"/>
+    <depends>com.intellij.modules.clion</depends>
+    <!--<extensions defaultExtensionNs="com.intellij"></extensions>-->
+    <actions>
+        <action id="CLion.Tool.CProject.Transformer"
+                class="lu.uni.clion.cproject.TransformAction"
+                text="Transform into C Project"
+                description="The default C++ project will be transformed into a C project." icon="/icons/C.png">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
